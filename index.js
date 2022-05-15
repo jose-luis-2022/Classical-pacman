@@ -47,6 +47,7 @@ function createTable() {
     for (let i = 0; i < design.length; i++) {
         let grid = document.createElement('div')
         table.appendChild(grid)
+        if (reset) table.removeChild(grid)
         totalSquares.push(grid)
 
         if(design[i]===0) {
@@ -61,9 +62,9 @@ function createTable() {
     }
 }
 
-if(!reset){
-     createTable()
-}
+createTable()
+
+
 
 let pacmanCurrent = 421
 totalSquares[pacmanCurrent].classList.add('pacman')
@@ -256,6 +257,10 @@ function pacmanPeller() {
         totalSquares[pacmanCurrent].classList.remove('pacman-1')
         totalSquares[pacmanCurrent].classList.remove('pacman-2')
         totalSquares[pacmanCurrent].classList.remove('pacman-3')
+        totalSquares[pacmanCurrent].classList.remove('pacman-dot')
+        totalSquares[pacmanCurrent].classList.remove('walls')
+        totalSquares[pacmanCurrent].classList.remove('ghost-lair')
+        totalSquares[pacmanCurrent].classList.remove('peller')
         pacmanCurrent = 421
         totalSquares[pacmanCurrent].classList.add('pacman')
         document.addEventListener("keyup",controlSystem)
@@ -264,9 +269,9 @@ function pacmanPeller() {
         createGhost()
         pacmanEaten()
         pacmanPeller()
+        createTable()
         resetBtn.disabled = true
         reset = false
-
     })
 
 
