@@ -1,0 +1,274 @@
+
+html{
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    font-family: 'chakra petch', sans-serif;
+    background-color:#4D5656;
+}
+
+header {
+    background-color:#34495E;
+    width: 100%;
+    height: 18vh;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 auto;
+    color: transparent;
+}
+h1 {
+    font-size: 4rem;
+    -webkit-text-stroke: 0.05em black;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.05em black;
+}
+
+.controls {
+    background-color: #34495E;
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.2em 1.5em;
+    background-color: white;
+    color:#34495E;
+    border: none;
+    border-radius: 0.1em;
+    margin: 1rem;
+    transition-duration: 0.5s;
+
+}
+
+button:hover,
+button:focus {
+    padding: 0.25rem 1.7rem;
+    background-color: black;
+    color:#34495E;
+}
+
+.table {
+    width: 540px;
+    height: 540px;
+    margin: 0;
+    border: 0.5em solid black;
+    background-color: #1C2833;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+.table div {
+   width: 18px;
+   height: 18px;
+}
+
+.pacman {
+    border-radius: 50%;
+}
+
+.pacman-1 {
+    border-radius: 50%;
+}
+
+.pacman-2 {
+    border-radius: 50%;
+}
+
+.pacman-3 {
+    border-radius: 50%;
+}
+
+.pacman::before,
+.pacman::after {
+    content:'';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 9px solid yellow;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: mouthTop 0.8s ease infinite;
+}
+
+.pacman::after {
+    border-color: yellow;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    animation: mouthBottom 0.8s ease infinite;
+}
+
+.pacman-2::before,
+.pacman-2::after {
+    content:'';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 9px solid yellow;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: mouthTop-2 0.8s ease infinite;
+}
+
+.pacman-2::after {
+    border-color: yellow;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    animation: mouthBottom-2 0.8s ease infinite;
+}
+
+.pacman-1::before,
+.pacman-1::after {
+    content:'';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 9px solid yellow;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: mouthTop-2 0.8s ease infinite;
+}
+
+.pacman-1::after {
+    border-color: yellow;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    animation: mouthBottom-2 0.8s ease infinite;
+}
+
+.pacman-3::before,
+.pacman-3::after {
+    content:'';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 9px solid yellow;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: mouthTop-3 0.8s ease infinite;
+}
+
+.pacman-3::after {
+    border-color: yellow;
+    border-top-color: transparent;
+    border-top-color: transparent;
+    animation: mouthBottom-3 0.8s ease infinite;
+}
+
+
+
+@keyframes mouthTop {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes mouthBottom {
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes mouthTop-1 {
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes mouthBottom-1 {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes mouthTop-2 {
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes mouthBottom-2 {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes mouthTop-3 {
+    50% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes mouthBottom-3 {
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+
+
+.peller {
+    border: none;
+    background-color: green;
+    border-radius: 9px;
+}
+
+.walls {
+    border-radius: 4px;
+    background-color: black;
+}
+
+.pacman-dot {
+    border: 6px solid #1C2833;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.inky {
+    border: none;
+    background-color: red;
+    border-radius: 4px;
+}
+
+.blinky {
+    border: none;
+    background-color: orange;
+    border-radius: 4px;
+}
+
+.pinky {
+    border: none;
+    background-color: pink;
+    border-radius: 4px;
+}
+
+.clyde {
+    border: none;
+    background-color: cyan;
+    border-radius: 4px;
+}
+
+.ghostScared {
+    border: none;
+    background-color: blue;
+    border-radius: 4px;
+}
+
